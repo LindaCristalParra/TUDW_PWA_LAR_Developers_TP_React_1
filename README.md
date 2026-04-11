@@ -5,7 +5,7 @@
 
 Este proyecto es una aplicación web desarrollada en React para la cátedra de **Programación Web Avanzada**. Funciona como un gestor personal de entretenimiento, permitiendo a los usuarios organizar, filtrar y administrar su catálogo de películas y series con una estética retro inspirada en los clásicos videoclubes.
 
-## Equipo de Desarrollo (Grupo 12)
+## Grupo 5 LAR DEVELOPERS
 * **Linda Cristal Parra Sambueza FAI-5568**: Project Manager / Scrum Master
 * **Ramiro Rafael Navarrete FAI-5522**: Developer
 * **Andrea Crespillo FAI-5546**: Developer
