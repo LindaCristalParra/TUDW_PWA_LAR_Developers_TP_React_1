@@ -1,0 +1,96 @@
+.formContainer {
+    background-color: #f3f4f6; /* Gris muy clarito de fondo */
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    border: 3px solid #1C3CA3; 
+}
+
+.formTitle {
+    font-family: 'ITCMachine', sans-serif;
+    color: #1C3CA3;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputGroup label {
+    font-weight: bold;
+    color: #374151;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+
+.inputGroup input, 
+.inputGroup select {
+    padding: 0.8rem;
+    border: 2px solid #1C3CA3; 
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.inputGroup input:focus, 
+.inputGroup select:focus {
+    border-color: #ECA83E; 
+    box-shadow: 0 0 8px rgba(236, 168, 62, 0.4);
+}
+
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+
+.radioContainer {
+    margin-top: 0.5rem;
+}
+
+.radioLabel {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.radioOptions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.radioItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+
+.formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #d1d5db;
+}
