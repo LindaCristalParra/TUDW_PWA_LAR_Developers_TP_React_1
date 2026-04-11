@@ -112,7 +112,7 @@ code {
 
 @font-face {
   font-family: 'ITCMachine';
-  src: url('./assets/Fonts/ITC\ Machine\ Std\ Bold.otf') format('opentype');
+  src: url('./assets/Fonts/ITCMachineStdBold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
   font-display: swap; 
