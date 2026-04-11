@@ -109,3 +109,11 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+@font-face {
+  font-family: 'ITCMachine';
+  src: url('./assets/Fonts/ITC\ Machine\ Std\ Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; 
+}

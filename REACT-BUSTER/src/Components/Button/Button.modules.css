@@ -1,0 +1,28 @@
+
+.btnYellow, .btnBlue, .btnGrey {
+    font-family: 'ITCMachine', sans-serif; 
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 4px; 
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #FFFFFF; 
+    border-style: solid; 
+    border-width: 2px;
+    transition: all 0.3s ease; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btnYellow { color: #ECA83E; border-color: #ECA83E; }
+.btnYellow:hover { background-color: #ECA83E; color: #1C3CA3; }
+
+.btnBlue { color: #1C3CA3; border-color: #1C3CA3; }
+.btnBlue:hover { background-color: #1C3CA3; color: #ECA83E; }
+
+.btnGrey { color: #6B7280; border-color: #6B7280; }
+.btnGrey:hover { background-color: #6B7280; color: #FFFFFF; }
