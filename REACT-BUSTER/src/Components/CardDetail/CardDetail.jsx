@@ -3,7 +3,7 @@ import styles from './CardDetail.module.css';
 import OpenEye_Icon from '../../assets/Icons/OpenEye_Icon.svg';
 import CloseEye_Icon from '../../assets/Icons/CloseEye_Icon.svg';
 import Edit_Icon from '../../assets/Icons/Edit_Icon.svg';
-import Delete_Icon from '../../assets/Icons/Detele_Icon.svg';
+import Delete_Icon from '../../assets/Icons/Delete_Icon.svg';
 
 const CardDetail = ({ movie, onEdit, onDelete, onToggleWatched }) => {
 
@@ -20,10 +20,13 @@ const CardDetail = ({ movie, onEdit, onDelete, onToggleWatched }) => {
                 <div className={styles.actionGroup}>
 
                     <button
-                        className={`${styles.iconButton} ${movie.watched ? styles.active : ''}`} 
+                        className={`${styles.iconButton} ${movie.watched ? styles.active : ''}`}
                         onClick={() => onToggleWatched(movie.id)}
                     >
-                        <img src={movie.watched ? CloseEye_Icon : OpenEye_Icon} alt="Visto"/>
+                        <img
+                            src={movie.watched ? CloseEye_Icon : OpenEye_Icon}
+                            alt={movie.watched ? "Ícono de ojo cerrado" : "Ícono de ojo abierto"}
+                        />
                     </button>
 
                     <button className={styles.iconButton} onClick={() => onEdit(movie)} title="Editar">
@@ -45,17 +48,17 @@ const CardDetail = ({ movie, onEdit, onDelete, onToggleWatched }) => {
             <div className={styles.textSection}>
 
                 <div className={styles.titleWrapper}>
-                    <label className={styles.inputLabel}>Título</label>
+                    <span className={styles.inputLabel}>Título</span>
                     <h2 className={styles.title}>{movie.title}</h2>
                 </div>
 
                 <div className={styles.infoGrid}>
                     <div className={styles.infoBox}>
-                        <label className={styles.inputLabel}>Director</label>
+                        <span className={styles.inputLabel}>Director</span>
                         <p className={styles.infoValue}>{movie.director}</p>
                     </div>
                     <div className={styles.infoBox}>
-                        <label className={styles.inputLabel}>Año</label>
+                        <span className={styles.inputLabel}>Año</span>
                         <p className={styles.infoValue}>{movie.year}</p>
                     </div>
                 </div>
