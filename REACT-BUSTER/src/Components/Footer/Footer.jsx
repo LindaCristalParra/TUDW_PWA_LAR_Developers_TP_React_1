@@ -6,10 +6,7 @@ export const Footer = () => {
   return (
     <footer className={styles.footerContainer}>
       <p className={styles.text}>
-        © {currentYear} <span className={styles.highlight}>Movie Tracker</span>. Todos los derechos reservados.
-      </p>
-      <p className={styles.text}>
-        Desarrollado con 💛 por el Grupo 12 para Programación Web Avanzada.
+        © {currentYear} <span className={styles.highlight}>REACT BUSTER</span>. Todos los derechos reservados.
       </p>
     </footer>
   );
