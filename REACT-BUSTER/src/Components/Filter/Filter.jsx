@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './Filter.module.css';
 
 const Filter = ({ currentFilters, onFilterChange }) => {
