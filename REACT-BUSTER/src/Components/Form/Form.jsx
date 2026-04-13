@@ -1,21 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../Button/Button'; 
 import styles from './Form.module.css';
 
+
+const defaultFormData = {
+  title: '',
+  image: '',
+  director: '',
+  year: '',
+  genre: '',
+  type: 'pelicula', 
+  rating: '' 
+};
+
+const normalizeFormData = (data) => ({
+  ...defaultFormData,
+  ...(data || {})
+});
+
 const Form = ({ initialData, onSave, onCancel }) => {
-  const [formData, setFormData] = useState(initialData || {
-    title: '',
-    image: '',
-    director: '',
-    year: '',
-    genre: '',
-    type: 'pelicula', 
-    rating: '' 
-  });
+  const [formData, setFormData] = useState(() => normalizeFormData(initialData));
+
+  useEffect(() => {
+    setFormData(normalizeFormData(initialData));
+  }, [initialData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
@@ -29,11 +41,12 @@ const Form = ({ initialData, onSave, onCancel }) => {
         {initialData ? 'EDITAR CONTENIDO' : 'NUEVA PELÍCULA'}
       </h2>
 
-      <form onSubmit={handleSubmit} className={styles.Form}>
+      <form onSubmit={handleSubmit} className={styles.movieForm}>
         
         <div className={styles.inputGroup}>
-          <label>Título</label>
+          <label htmlFor="title">Título</label>
           <input 
+            id="title"
             name="title" 
             value={formData.title} 
             onChange={handleChange} 
@@ -43,8 +56,10 @@ const Form = ({ initialData, onSave, onCancel }) => {
         </div>
 
         <div className={styles.inputGroup}>
-          <label>Imagen (URL)</label>
+          <label htmlFor="image">Imagen (URL)</label>
           <input 
+            id="image"
+            type="url"
             name="image" 
             value={formData.image} 
             onChange={handleChange} 
@@ -54,18 +69,29 @@ const Form = ({ initialData, onSave, onCancel }) => {
 
         <div className={styles.formRow}>
           <div className={styles.inputGroup}>
-            <label>Director</label>
-            <input name="director" value={formData.director} onChange={handleChange} />
+            <label htmlFor="director">Director</label>
+            <input 
+              id="director"
+              name="director" 
+              value={formData.director} 
+              onChange={handleChange} 
+            />
           </div>
           <div className={styles.inputGroup}>
-            <label>Año</label>
-            <input type="number" name="year" value={formData.year} onChange={handleChange} />
+            <label htmlFor="year">Año</label>
+            <input 
+              id="year"
+              type="number" 
+              name="year" 
+              value={formData.year} 
+              onChange={handleChange} 
+            />
           </div>
         </div>
 
         <div className={styles.inputGroup}>
-          <label>Género</label>
-          <select name="genre" value={formData.genre} onChange={handleChange} required>
+          <label htmlFor="gen">Género</label>
+          <select id="gen" name="gen" value={formData.genre} onChange={handleChange} required>
             <option value="">Seleccionar género...</option>
             <option value="accion">Acción</option>
             <option value="comedia">Comedia</option>
@@ -76,8 +102,8 @@ const Form = ({ initialData, onSave, onCancel }) => {
         </div>
 
         <div className={styles.inputGroup}>
-          <label>Rating (Puntaje)</label>
-          <select name="rating" value={formData.rating} onChange={handleChange} required>
+          <label htmlFor="rating">Rating (Puntaje)</label>
+          <select id="rating" name="rating" value={formData.rating} onChange={handleChange} required>
             <option value="">¿Qué puntaje le das?</option>
             <option value="1">1 - Mala</option>
             <option value="2">2 - Regular</option>
@@ -87,11 +113,13 @@ const Form = ({ initialData, onSave, onCancel }) => {
           </select>
         </div>
 
-        <div className={styles.radioContainer}>
-          <label className={styles.radioLabel}>Tipo de contenido:</label>
+    
+        <fieldset className={styles.radioContainer}>
+          <legend className={styles.radioLabel}>Tipo de contenido:</legend>
           <div className={styles.radioOptions}>
-            <label className={styles.radioItem}>
+            <label className={styles.radioItem} htmlFor="type-peli">
               <input 
+                id="type-peli"
                 type="radio" 
                 name="type" 
                 value="pelicula" 
@@ -100,8 +128,9 @@ const Form = ({ initialData, onSave, onCancel }) => {
               />
               Película
             </label>
-            <label className={styles.radioItem}>
+            <label className={styles.radioItem} htmlFor="type-serie">
               <input 
+                id="type-serie"
                 type="radio" 
                 name="type" 
                 value="serie" 
@@ -111,10 +140,10 @@ const Form = ({ initialData, onSave, onCancel }) => {
               Serie
             </label>
           </div>
-        </div>
+        </fieldset>
 
         <div className={styles.formActions}>
-          <Button text="Guardar" variant="blue" type="submit" />
+          <Button text="Guardar" variant="yellow" type="submit" />
           <Button text="Cancelar" variant="grey" onClick={onCancel} />
         </div>
       </form>
