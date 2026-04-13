@@ -14,7 +14,8 @@ export const List = ({ items = [] }) => {
     <div className={styles.carouselContainer}>
       {items.map((item) => (
         <div key={item.id} className={styles.carouselItem}>
-          <Card movieData={item} />
+          {}
+          <Card movie={item} onClick={() => {}} />
         </div>
       ))}
     </div>
