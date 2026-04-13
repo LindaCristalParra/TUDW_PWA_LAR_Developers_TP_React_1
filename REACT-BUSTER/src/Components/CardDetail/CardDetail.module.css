@@ -1,0 +1,146 @@
+
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+
+.imageSection {
+  width: 100%;
+  height: 250px; 
+  background-color: #dcdcdc; 
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+
+.middleSection {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 1rem;
+}
+
+
+.actionGroup {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.iconButton {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+
+.iconButton img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.iconButton:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+  transform: translateY(-2px);
+}
+
+
+.badgeGroup {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap; 
+}
+
+.badge {
+  background-color: #f0f4f8; 
+  color: #1C3CA3;
+  border: 1px solid #1C3CA3;
+  padding: 6px 16px;
+  border-radius: 20px; 
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.inputLabel {
+  font-size: 0.75rem;
+  color: #1C3CA3; 
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.titleWrapper, .infoBox {
+  background-color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #ECA83E; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.title {
+  font-family: var(--font-heading); 
+  font-size: 1.8rem;
+  margin: 0;
+  color: #111;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 1.2rem; 
+}
+
+.infoValue {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #333;
+  font-weight: 500;
+}
+
+
+@media (max-width: 500px) {
+  .infoGrid {
+    grid-template-columns: 1fr; 
+  }
+  .middleSection {
+    flex-direction: column;
+    align-items: flex-start; 
+  }
+}
