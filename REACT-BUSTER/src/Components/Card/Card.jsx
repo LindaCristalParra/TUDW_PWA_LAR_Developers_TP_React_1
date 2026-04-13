@@ -1,11 +1,27 @@
-import styles from './MovieCard.module.css';
+import React from 'react';
+import styles from './Card.module.css';
 
-const Card = ({ movie, onClick }) => {
+const MovieCard = ({ movie, onClick }) => {
+  
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault(); 
+      onClick(movie);
+    }
+  };
+
   return (
-    <div className={styles.card} onClick={() => onClick(movie)}>
+    <div 
+      className={styles.card} 
+      onClick={() => onClick(movie)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
+      aria-label={`Ver detalles de la película ${movie.title}`} 
+    >
       <div className={styles.imageContainer}>
-        <img src={movie.image} alt={movie.title} className={styles.poster} />
-        <span className={styles.type}>{movie.type}</span>
+        <img src={movie.image} alt={`Portada de ${movie.title}`} className={styles.poster} />
+        <span className={styles.badge}>{movie.type}</span>
       </div>
       <div className={styles.info}>
         <h3 className={styles.title}>{movie.title}</h3>
@@ -15,4 +31,4 @@ const Card = ({ movie, onClick }) => {
   );
 };
 
-export default Card;
+export default MovieCard;

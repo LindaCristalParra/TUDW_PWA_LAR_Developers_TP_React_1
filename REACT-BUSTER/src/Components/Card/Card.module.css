@@ -18,6 +18,13 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
+.card:focus-visible {
+  outline: none; 
+  transform: scale(1.05); 
+  border-color: #ECA83E; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
 .imageContainer {
   position: relative;
   width: 100%;
