@@ -5,8 +5,14 @@ export const Modal = ({ isOpen, onClose, children }) => {
 
   return (
     <div className={styles.overlay} onClick={onClose}>
-      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeButton} onClick={onClose}>
+      <div 
+        className={styles.modalContent} 
+        role="dialog"
+        aria-modal="true"
+        aria-label="Modal dialog"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button type="button" className={styles.closeButton} onClick={onClose}>
           X
         </button>
         {children}
