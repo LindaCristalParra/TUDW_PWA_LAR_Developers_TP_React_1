@@ -1,5 +1,5 @@
 import styles from './List.module.css';
-import { Card } from '../Card/Card';
+import  Card  from '../Card/Card';
 
 export const List = ({ items = [] }) => {
   if (items.length === 0) {
