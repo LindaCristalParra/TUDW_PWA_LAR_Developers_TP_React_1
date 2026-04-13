@@ -1,0 +1,33 @@
+.alertBox {
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+  margin: 15px 0;
+  width: 100%;
+}
+
+
+.danger {
+  background-color: #ff4d4d; 
+  color: white;
+}
+
+.success {
+  background-color: #4CAF50; 
+  color: white;
+}
+
+.warning {
+  background-color: #ECA83B; 
+  color: #000;
+}
+
+.info {
+  background-color: #1C3CA3; 
+  color: white;
+}
