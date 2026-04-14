@@ -1,0 +1,92 @@
+[
+	{
+		"title": "Buscando a Nemo",
+		"image": "",
+		"director": "Andrew Stanton",
+		"year": "2003",
+		"genre": "comedia",
+		"type": "pelicula",
+		"rating": "4"
+	},
+	{
+		"title": "El Rey Leon",
+		"image": "",
+		"director": "Roger Allers",
+		"year": "1994",
+		"genre": "aventura",
+		"type": "pelicula",
+		"rating": "5"
+	},
+	{
+		"title": "Toy Story",
+		"image": "",
+		"director": "John Lasseter",
+		"year": "1995",
+		"genre": "comedia",
+		"type": "pelicula",
+		"rating": "5"
+	},
+	{
+		"title": "Avatar",
+		"image": "",
+		"director": "James Cameron",
+		"year": "2009",
+		"genre": "ciencia-ficcion",
+		"type": "pelicula",
+		"rating": "4"
+	},
+	{
+		"title": "El Conjuro",
+		"image": "",
+		"director": "James Wan",
+		"year": "2013",
+		"genre": "terror",
+		"type": "pelicula",
+		"rating": "4"
+	},
+	{
+		"title": "Interestelar",
+		"image": "",
+		"director": "Christopher Nolan",
+		"year": "2014",
+		"genre": "ciencia-ficcion",
+		"type": "pelicula",
+		"rating": "5"
+	},
+	{
+		"title": "Shrek",
+		"image": "",
+		"director": "Andrew Adamson",
+		"year": "2001",
+		"genre": "comedia",
+		"type": "pelicula",
+		"rating": "4"
+	},
+	{
+		"title": "Titanic",
+		"image": "",
+		"director": "James Cameron",
+		"year": "1997",
+		"genre": "drama",
+		"type": "pelicula",
+		"rating": "5"
+	},
+	{
+		"title": "Coco",
+		"image": "",
+		"director": "Lee Unkrich",
+		"year": "2017",
+		"genre": "aventura",
+		"type": "pelicula",
+		"rating": "5"
+	},
+	{
+		"title": "Spider-Man: No Way Home",
+		"image": "",
+		"director": "Jon Watts",
+		"year": "2021",
+		"genre": "accion",
+		"type": "pelicula",
+		"rating": "5"
+	}
+]
