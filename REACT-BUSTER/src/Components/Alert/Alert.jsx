@@ -1,6 +1,6 @@
 import styles from './Alert.module.css';
 
-export const Alert = ({ text, type = 'info' }) => {
+const Alert = ({ text, type = 'info' }) => {
   const ariaRole = type === 'danger' ? 'alert' : 'status';
 
   return (
@@ -9,3 +9,4 @@ export const Alert = ({ text, type = 'info' }) => {
     </div>
   );
 };
+export default Alert;

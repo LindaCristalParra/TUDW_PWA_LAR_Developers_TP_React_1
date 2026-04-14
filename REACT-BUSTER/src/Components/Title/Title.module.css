@@ -1,13 +1,10 @@
 .Title {
+  font-family: var(--font-heading); 
   font-size: 2.5rem;
   font-weight: 900;
-  color: #ECA83E;
-  background-color: #1C3CA3; 
-  padding: 10px 20px;
-  border-radius: 8px;
+  color: #1C3CA3;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.8);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }

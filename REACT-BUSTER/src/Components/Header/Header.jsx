@@ -1,4 +1,3 @@
-import React from 'react';
 import Filter from '../Filter/Filter'; 
 import styles from './Header.module.css';
 
@@ -23,7 +22,10 @@ const Header = ({ currentFilters, onFilterChange, onSearch }) => {
 
       
       <div className={styles.searchContainer}>
-        <Search onSearch={onSearch}/>
+        {/* <Search onSearch={onSearch}/> */}
+        <div className={styles.searchPlaceholder}>
+        <p>Buscador en desarrollo...</p>
+        </div>
       </div>
 
     </header>
