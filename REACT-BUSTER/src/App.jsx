@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-import Search from "./Components/Search/Search";
+import SearchContainer from "./Components/Search/SearchContainer";
+import FilterTitleDirector from "./Components/Filter/FilterTitleDirector";
+import MovieCard from "./Components/Card/Card";
 
 const movies = [
   {
@@ -8,40 +10,37 @@ const movies = [
     image: '',
     director: 'Andrew Stanton',
     year: '2003',
-    genre: 'Infantil',
+    genre: 'comedia',
     type: 'pelicula',
-    rating: ''
+    rating: '4'
   },
   {
     title: 'El Rey León',
     image: '',
     director: 'Roger Allers',
     year: '1994',
-    genre: 'Infantil',
+    genre: 'comedia',
     type: 'pelicula',
-    rating: ''
-  },
-  {
-    title: '',
-    image: '',
-    director: '',
-    year: '',
-    genre: '',
-    type: 'pelicula',
-    rating: ''
-  },
+    rating: '5'
+  },  
 ];
 function App() {
 
   const [searchValue, setSearchValue] = useState("");
+  const filteredMoviesByTitle = movies.filter((movie) => FilterTitleDirector(movie, searchValue));
 
 
   return (
     <div className="App">
       <div>Hola React Buster</div>
-      <Search>
-        <input type="text" placeholder="Buscar por nombre o director" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
-      </Search>
+      <SearchContainer onSearchChange={setSearchValue} />
+
+      <div>
+        {filteredMoviesByTitle.map((movie) => {
+          return <MovieCard key={movie.title} movie={movie} />;
+        })}
+      </div>
+      
     </div>
   )
 }
