@@ -23,7 +23,10 @@ const Header = ({ currentFilters, onFilterChange, onSearch }) => {
 
       
       <div className={styles.searchContainer}>
-        <Search onSearch={onSearch}/>
+        {/* <Search onSearch={onSearch}/> */}
+        <div className={styles.searchPlaceholder}>
+        <p>Buscador en desarrollo...</p>
+        </div>
       </div>
 
     </header>
