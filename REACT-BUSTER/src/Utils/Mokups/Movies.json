@@ -1,92 +1,122 @@
 [
 	{
+		"id": "Buscando a Nemo-1",
 		"title": "Buscando a Nemo",
-		"image": "",
+		"image": "/React.svg",
 		"director": "Andrew Stanton",
 		"year": "2003",
 		"genre": "comedia",
 		"type": "pelicula",
-		"rating": "4"
+		"rating": "4",
+		"watched": true,
+		"deleted": false
 	},
 	{
+		"id": "El Rey Leon-2",
 		"title": "El Rey Leon",
-		"image": "",
+		"image": "/React.svg",
 		"director": "Roger Allers",
 		"year": "1994",
 		"genre": "aventura",
 		"type": "pelicula",
-		"rating": "5"
+		"rating": "5",
+		"watched": false,
+		"deleted": false
 	},
 	{
+		"id": "Toy Story-3",
 		"title": "Toy Story",
-		"image": "",
+		"image": "/React.svg",
 		"director": "John Lasseter",
 		"year": "1995",
 		"genre": "comedia",
 		"type": "pelicula",
-		"rating": "5"
+		"rating": "5",
+		"watched": false,
+		"deleted": false
 	},
 	{
+		"id": "Avatar-4",
 		"title": "Avatar",
-		"image": "",
+		"image": "/React.svg",
 		"director": "James Cameron",
 		"year": "2009",
 		"genre": "ciencia-ficcion",
-		"type": "pelicula",
-		"rating": "4"
+		"type": "serie",
+		"rating": "4",
+		"watched": true,
+		"deleted": false
 	},
 	{
+		"id": "El Conjuro-5",
 		"title": "El Conjuro",
-		"image": "",
+		"image": "/React.svg",
 		"director": "James Wan",
 		"year": "2013",
 		"genre": "terror",
-		"type": "pelicula",
-		"rating": "4"
+		"type": "serie",
+		"rating": "4",
+		"watched": false,
+		"deleted": false
 	},
 	{
+		"id": "Interestelar-6",
 		"title": "Interestelar",
-		"image": "",
+		"image": "/React.svg",
 		"director": "Christopher Nolan",
 		"year": "2014",
 		"genre": "ciencia-ficcion",
 		"type": "pelicula",
-		"rating": "5"
+		"rating": "5",
+		"watched": true,
+		"deleted": false
 	},
 	{
+		"id": "Shrek-7",
 		"title": "Shrek",
-		"image": "",
+		"image": "/React.svg",
 		"director": "Andrew Adamson",
 		"year": "2001",
 		"genre": "comedia",
-		"type": "pelicula",
-		"rating": "4"
+		"type": "serie",
+		"rating": "4",
+		"watched": false,
+		"deleted": false
 	},
 	{
+		"id": "Titanic-8",
 		"title": "Titanic",
-		"image": "",
+		"image": "/React.svg",
 		"director": "James Cameron",
 		"year": "1997",
 		"genre": "drama",
 		"type": "pelicula",
-		"rating": "5"
+		"rating": "5",
+		"watched": false,
+		"deleted": false
 	},
 	{
+		"id": "Coco-9",
 		"title": "Coco",
-		"image": "",
+		"image": "/React.svg",
 		"director": "Lee Unkrich",
 		"year": "2017",
 		"genre": "aventura",
 		"type": "pelicula",
-		"rating": "5"
+		"rating": "5",
+		"watched": false,
+		"deleted": false
 	},
 	{
+		"id": "Spider-Man: No Way Home-10",
 		"title": "Spider-Man: No Way Home",
-		"image": "",
+		"image": "/React.svg",
 		"director": "Jon Watts",
 		"year": "2021",
 		"genre": "accion",
-		"type": "pelicula",
-		"rating": "5"
+		"type": "Serie",
+		"rating": "5",
+		"watched": false,
+		"deleted": false
 	}
 ]
