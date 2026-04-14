@@ -1,7 +1,7 @@
 import styles from './List.module.css';
 import { Card } from '../Card/Card';
 
-export const List = ({ items = [] }) => {
+const List = ({ items = [] }) => {
   if (items.length === 0) {
     return (
       <p className={styles.emptyMessage}>
@@ -21,3 +21,4 @@ export const List = ({ items = [] }) => {
     </div>
   );
 };
+export default List;
