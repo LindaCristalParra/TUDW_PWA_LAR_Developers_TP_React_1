@@ -90,8 +90,8 @@ const Form = ({ initialData, onSave, onCancel }) => {
         </div>
 
         <div className={styles.inputGroup}>
-          <label htmlFor="gen">Género</label>
-          <select id="gen" name="gen" value={formData.genre} onChange={handleChange} required>
+          <label htmlFor="genre">Género</label>
+          <select id="genre" name="genre" value={formData.genre} onChange={handleChange} required>
             <option value="">Seleccionar género...</option>
             <option value="accion">Acción</option>
             <option value="comedia">Comedia</option>

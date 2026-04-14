@@ -1,0 +1,49 @@
+.headerContainer {
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px; 
+  background: linear-gradient(150deg, #314482 20%, #081F69 65%);
+  padding: 0 2rem; 
+  box-sizing: border-box; 
+  overflow: visible; 
+  position: relative;
+  z-index: 1000;
+}
+
+
+.logo {
+  font-family: var(--font-heading); 
+  color: #ECA83E;
+  font-size: 42px;      
+  line-height: 35px;     
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.4); 
+  letter-spacing: 1px; 
+  text-align: center; 
+  display: inline-block;
+}
+
+
+
+.logoContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; 
+  padding-left: 1rem;
+}
+
+.navContainer {
+  flex: 2;
+  display: flex;
+  justify-content: center; 
+}
+
+.searchContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; 
+}
+
