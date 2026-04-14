@@ -1,6 +1,7 @@
 import { useState } from "react";
+import "./App.css";
 
-import SearchContainer from "./Components/Search/SearchContainer";
+import Header from "./Components/Header/Header";
 import FilterTitleDirector from "./Components/Filter/FilterTitleDirector";
 import MovieCard from "./Components/Card/Card";
 
@@ -27,16 +28,31 @@ const movies = [
 function App() {
 
   const [searchValue, setSearchValue] = useState("");
-  const filteredMoviesByTitle = movies.filter((movie) => FilterTitleDirector(movie, searchValue));
+  const [currentFilters, setCurrentFilters] = useState({
+    type: "pelicula",
+    genre: "todos"
+  });
+
+  const filteredMovies = movies.filter((movie) => {
+    const matchesSearch = FilterTitleDirector(movie, searchValue);
+    const matchesType = currentFilters.type ? movie.type === currentFilters.type : true;
+    const matchesGenre =
+      currentFilters.genre === "todos" ? true : movie.genre === currentFilters.genre;
+
+    return matchesSearch && matchesType && matchesGenre;
+  });
 
 
   return (
     <div className="App">
-      <div>Hola React Buster</div>
-      <SearchContainer onSearchChange={setSearchValue} />
+      <Header
+        currentFilters={currentFilters}
+        onFilterChange={setCurrentFilters}
+        onSearch={setSearchValue}
+      />
 
-      <div>
-        {filteredMoviesByTitle.map((movie) => {
+      <div className="cardsContainer">
+        {filteredMovies.map((movie) => {
           return <MovieCard key={movie.title} movie={movie} />;
         })}
       </div>
