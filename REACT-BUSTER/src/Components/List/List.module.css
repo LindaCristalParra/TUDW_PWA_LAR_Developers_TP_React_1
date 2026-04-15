@@ -1,3 +1,12 @@
+.listWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; 
+}
+
+
 .carouselContainer {
   display: flex;
   overflow-x: auto; 
@@ -5,34 +14,72 @@
   gap: 20px;
   padding: 20px 10px;
   width: 100%;
-  
   scroll-behavior: smooth; 
+  outline: none; 
+  
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
 }
+
 
 .carouselContainer::-webkit-scrollbar {
-  height: 10px;
+  display: none; 
 }
 
-.carouselContainer::-webkit-scrollbar-track {
-  background: #1C3CA3; 
-  border-radius: 10px;
-}
-
-.carouselContainer::-webkit-scrollbar-thumb {
-  background: #ECA83E; 
-  border-radius: 10px;
-}
 
 .carouselItem {
   scroll-snap-align: start; 
   flex: 0 0 auto; 
-  width: 250px; }
+  width: 250px; 
+}
+
 
 .emptyMessage {
   text-align: center;
-  color: #ECA83E;
+  color: #ECA83E; 
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 40px;
   text-transform: uppercase;
+}
+
+
+.arrowBtn {
+  position: absolute;
+  z-index: 10;
+  
+ 
+  background-color: rgba(8, 31, 105, 0.9); 
+  color: #ECA83E; 
+  border: 2px solid #ECA83E;
+  
+
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+
+.arrowBtn:hover {
+  background-color: #ECA83E;
+  color: #081F69;
+  transform: scale(1.1); 
+}
+
+
+.leftArrow {
+  left: 0;
+}
+
+
+.rightArrow {
+  right: 0;
 }

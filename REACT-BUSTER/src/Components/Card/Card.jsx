@@ -1,7 +1,6 @@
-import React from 'react';
 import styles from './Card.module.css';
 
-const MovieCard = ({ movie, onClick }) => {
+const Card = ({ movie, onClick }) => {
   
   const handleKeyDown = (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
@@ -31,4 +30,4 @@ const MovieCard = ({ movie, onClick }) => {
   );
 };
 
-export default MovieCard;
+export default Card;

@@ -1,7 +1,32 @@
+import {useRef} from 'react';
 import styles from './List.module.css';
-import MovieCard from '../Card/Card';
+import Card from '../Card/Card';
 
 const List = ({ items = [] }) => {
+  const carouselRef = useRef(null);
+
+  
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: -270, behavior: 'smooth' });
+    }
+  };
+
+  
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: 270, behavior: 'smooth' });
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowLeft') {
+      scrollLeft();
+    } else if (e.key === 'ArrowRight') {
+      scrollRight();
+    }
+  };
+
   if (items.length === 0) {
     return (
       <p className={styles.emptyMessage}>
@@ -11,12 +36,28 @@ const List = ({ items = [] }) => {
   }
 
   return (
-    <div className={styles.carouselContainer}>
+
+    <div className={styles.listWrapper}> 
+      
+      <button className={`${styles.arrowBtn} ${styles.leftArrow}`} onClick={scrollLeft}>
+        &#10094; 
+      </button>
+
+    <div className={styles.carouselContainer}
+      ref={carouselRef}
+      onKeyDown={handleKeyDown}
+      tabIndex="0">
       {items.map((item) => (
         <div key={item.id} className={styles.carouselItem}>
-          <MovieCard movie={item} onClick={() => {}} />
+          <Card movie={item} onClick={() => { }} />
         </div>
       ))}
+    </div>
+
+    <button className={`${styles.arrowBtn} ${styles.rightArrow}`} onClick={scrollRight}>
+        &#10095; 
+      </button>
+      
     </div>
   );
 };
