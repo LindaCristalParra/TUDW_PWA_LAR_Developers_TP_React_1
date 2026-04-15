@@ -30,7 +30,7 @@
 .carouselItem {
   scroll-snap-align: start; 
   flex: 0 0 auto; 
-  width: 250px; 
+  width: 120px; 
 }
 
 

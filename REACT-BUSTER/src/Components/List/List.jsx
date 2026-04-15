@@ -8,14 +8,14 @@ const List = ({ items = [] }) => {
   
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -270, behavior: 'smooth' });
+      carouselRef.current.scrollBy({ left: -220, behavior: 'smooth' });
     }
   };
 
   
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 270, behavior: 'smooth' });
+      carouselRef.current.scrollBy({ left: 220, behavior: 'smooth' });
     }
   };
 
