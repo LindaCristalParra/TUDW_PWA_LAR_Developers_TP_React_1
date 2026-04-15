@@ -40,7 +40,6 @@ const Filter = ({ currentFilters, onFilterChange }) => {
         
         {isGenreOpen && (
           <div className={styles.dropdownMenu}>
-            <button onClick={() => handleGenreSelect('todos')}>Todos</button>
             <button onClick={() => handleGenreSelect('accion')}>Acción</button>
             <button onClick={() => handleGenreSelect('comedia')}>Comedia</button>
             <button onClick={() => handleGenreSelect('terror')}>Terror</button>
