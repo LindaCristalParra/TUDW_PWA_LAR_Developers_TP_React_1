@@ -42,8 +42,9 @@
 }
 
 .searchContainer {
-  flex: 1;
+  flex: 1.4;
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
+  padding-right: 16px;
 }
 

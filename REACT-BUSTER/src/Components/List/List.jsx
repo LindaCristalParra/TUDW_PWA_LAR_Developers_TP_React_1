@@ -1,5 +1,5 @@
 import styles from './List.module.css';
-import { Card } from '../Card/Card';
+import MovieCard from '../Card/Card';
 
 const List = ({ items = [] }) => {
   if (items.length === 0) {
@@ -14,8 +14,7 @@ const List = ({ items = [] }) => {
     <div className={styles.carouselContainer}>
       {items.map((item) => (
         <div key={item.id} className={styles.carouselItem}>
-          {}
-          <Card movie={item} onClick={() => {}} />
+          <MovieCard movie={item} onClick={() => {}} />
         </div>
       ))}
     </div>
