@@ -26,7 +26,7 @@
 	{
 		"id": "Virgen a los 40-3",
 		"title": "Virgen a los 40",
-		"image": "/posters/Virgen a los 40.png",
+		"image": "/posters/VirgenAlos40.png",
 		"director": "Judd Apatow",
 		"year": "2005",
 		"genre": "comedia",
@@ -50,7 +50,7 @@
 	{
 		"id": "El Conjuro-5",
 		"title": "El Conjuro",
-		"image": "/posters/El Conjuro.png",
+		"image": "/posters/ElConjuro.png",
 		"director": "James Wan",
 		"year": "2013",
 		"genre": "terror",
@@ -74,7 +74,7 @@
 	{
 		"id": "Rapidos y Furiosos: Reto Tokio-7",
 		"title": "Rapidos y Furiosos: Reto Tokio",
-		"image": "/posters/Rapidos y Furiosos Reto Tokio.png",
+		"image": "/posters/RapidosyFuriososRetoTokio.png",
 		"director": "Justin Lin",
 		"year": "2011",
 		"genre": "accion",
@@ -98,7 +98,7 @@
 	{
 		"id": "El Irlandes-9",
 		"title": "El Irlandes",
-		"image": "/posters/El Irlandes.png",
+		"image": "/posters/ElIrlandes.png",
 		"director": "Martin Scorsese",
 		"year": "2019",
 		"genre": "drama",
@@ -110,7 +110,7 @@
 	{
 		"id": "Golpe Bajo-10",
 		"title": "Golpe Bajo",
-		"image": "/posters/Golpe Bajo.png",
+		"image": "/posters/GolpeBajo.png",
 		"director": "Peter Segal",
 		"year": "2005",
 		"genre": "comedia",
@@ -122,7 +122,7 @@
 	{
 		"id":"El Padrino-11",
 		"title": "El Padrino",
-		"image": "/posters/El Padrino.png",
+		"image": "/posters/ElPadrino.png",
 		"director": "Francis Ford Coppola",
 		"year": "1972",
 		"genre": "drama",
@@ -134,7 +134,7 @@
 	{
 		"id":"Irene, yo y mi otro yo-12",
 		"title": "Irene, yo y mi otro yo",
-		"image": "/posters/Irene, yo y mi otro yo.png",
+		"image": "/posters/IreneYYo.png",
 		"director": "Francis Ford Coppola",
 		"year": "2000",
 		"genre": "comedia",
@@ -144,9 +144,9 @@
 		"deleted": false
 	},
 	{
-		"id":"Vivir al limite-12",
+		"id":"Vivir al limite-13",
 		"title": "Vivir al limite",
-		"image": "/posters/Vivir al Limite.png",
+		"image": "/posters/VivirAlLimite.png",
 		"director": "Kathryn Bigelow",
 		"year": "2009",
 		"genre": "accion",
@@ -156,9 +156,9 @@
 		"deleted": false
 	},
 	{
-		"id":"Origen-13",
+		"id":"Origen-14",
 		"title": "Origen",
-		"image": "/posters/El Origen.png",
+		"image": "/posters/ElOrigen.png",
 		"director": "Christopher Nolan",
 		"year": "2010",
 		"genre": "ciencia-ficcion",
@@ -168,9 +168,9 @@
 		"deleted": false
 	},
 	{
-		"id":"Fenomeno Siniestro-14",
+		"id":"Fenomeno Siniestro-15",
 		"title": "Fenomeno Siniestro",
-		"image": "/posters/Fenomeno Siniestro.png",
+		"image": "/posters/FenomenoSiniestro.png",
 		"director": "The Vicious Brothers",
 		"year": "2011",
 		"genre": "terror",
@@ -180,9 +180,9 @@
 		"deleted": false
 	},
 	{
-		"id":"Pequeños Secretos-15",
+		"id":"Pequeños Secretos-16",
 		"title": "Pequeños Secretos",
-		"image": "/posters/Pequeños Secretos.png",
+		"image": "/posters/PequeñosSecretos.png",
 		"director": "John Lee Hancock",
 		"year": "2011",
 		"genre": "drama",
@@ -192,7 +192,7 @@
 		"deleted": false
 	},
 	{
-		"id":"Depredador-16",
+		"id":"Depredador-17",
 		"title": "Depredador",
 		"image": "/posters/Depredador.png",
 		"director": "John McTiernan",
@@ -204,9 +204,9 @@
 		"deleted": false
 	},
 	{
-		"id":"¿Y donde estan las rubias?-17",
-		"title": "¿Y donde estan las rubias?",
-		"image": "/posters/Y dónde están las rubias .png",
+		"id":"¿Y dónde están las rubias?-18",
+		"title": "¿Y dónde están las rubias?",
+		"image": "/posters/Rubias.png",
 		"director": "Keenen Ivory Wayans",
 		"year": "2004",
 		"genre": "comedia",
@@ -216,9 +216,9 @@
 		"deleted": false
 	},
 	{
-		"id":"El único sobreviviente-17",
+		"id":"El único sobreviviente-19",
 		"title": "El único sobreviviente",
-		"image": "/posters/El Único Sobreviviente.png",
+		"image": "/posters/Sobreviviente.png",
 		"director": "Peter Berg",
 		"year": "2013",
 		"genre": "accion",
@@ -228,9 +228,9 @@
 		"deleted": false
 	},
 	{
-		"id":"Actividad Paranormal: Los Marcados-18",
+		"id":"Actividad Paranormal: Los Marcados-20",
 		"title": "Actividad Paranormal: Los Marcados",
-		"image": "/posters/Actividad Paranormal Los Marcados.png",
+		"image": "/posters/Marcados.png",
 		"director": "Christopher Landon ",
 		"year": "2014",
 		"genre": "terror",
@@ -240,9 +240,9 @@
 		"deleted": false
 	},
 	{
-		"id":"El Transportador-19",
+		"id":"El Transportador-21",
 		"title": "El Transportador",
-		"image": "/posters/El Transportador.png",
+		"image": "/posters/Transportador.png",
 		"director": "Louis Leterrier",
 		"year": "2002",
 		"genre": "accion",
@@ -252,9 +252,9 @@
 		"deleted": false
 	},
 	{
-		"id":"El Justiciero-20",
+		"id":"El Justiciero-22",
 		"title": "El Justiciero",
-		"image": "/posters/El Justiciero.png",
+		"image": "/posters/Justiciero.png",
 		"director": "Antonie Fuqua",
 		"year": "2014",
 		"genre": "accion",
@@ -264,9 +264,9 @@
 		"deleted": false
 	},
 	{
-		"id":"El Show de Truman-21",
+		"id":"El Show de Truman-23",
 		"title": "El Show de Truman",
-		"image": "/posters/El Show de Truman.png",
+		"image": "/posters/Truman.png",
 		"director": "Peter Weir",
 		"year": "1998",
 		"genre": "comedia",
@@ -276,7 +276,7 @@
 		"deleted": false
 	},
 	{
-		"id":"Siniestro-22",
+		"id":"Siniestro-24",
 		"title": "Siniestro",
 		"image": "/posters/Siniestro.png",
 		"director": "Scott Derrickson",
@@ -288,9 +288,9 @@
 		"deleted": false
 	},
 	{
-		"id":"La llamada 3-23",
+		"id":"La llamada 3-25",
 		"title": "La llamada 3",
-		"image": "/posters/La llamada 3.png",
+		"image": "/posters/Llamada.png",
 		"director": "Francisco Javier Gutiérrez",
 		"year": "2017",
 		"genre": "terror",
