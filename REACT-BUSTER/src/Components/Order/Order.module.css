@@ -1,0 +1,54 @@
+.orderContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-family: monospace;
+}
+
+.mainButton {
+  background-color: #1C3CA3; 
+  color: #ECA83E; 
+  border: 2px solid #ECA83E;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mainButton:hover {
+  background-color: #003b75;
+}
+
+.controlsPanel {
+  display: flex;
+  gap: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.controlGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.selectInput {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
