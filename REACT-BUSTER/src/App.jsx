@@ -4,14 +4,21 @@ import Footer from './Components/Footer/Footer';
 import styles from './App.module.css';
 import Movies from './Utils/Mokups/Movies.json';
 import FilterTitleDirector from './Utils/Filter/FilterTitleDirector';
-import List from './Components/List/List';
+import Home from './Pages/Home/Home';
+
 
 
 function App() {
+  
+  const [movies, setMovies] = useState(Movies);
   const [filters, setFilters] = useState({ type: 'todos', genre: 'todos' });
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredMovies = Movies.filter((movie) => {
+  const toggleWatched = (id) => {
+    setMovies(movies.map(m => m.id === id ? { ...m, watched: !m.watched } : m));
+  };
+
+  const filteredMovies = movies.filter((movie) => {
     const matchesSearch = FilterTitleDirector(movie, searchTerm);
     const matchesType = filters.type === 'todos' ? true : movie.type === filters.type;
     const matchesGenre =
@@ -31,7 +38,7 @@ function App() {
 
 
       <main className={styles.mainContent}>
-        <List items={filteredMovies} />
+        <Home movies={filteredMovies} onToggleWatched={toggleWatched} />
       </main>
 
       <Footer />

@@ -7,19 +7,27 @@
   font-family: monospace;
 }
 
-.mainButton {
+.mainLabel {
   background-color: #1C3CA3; 
   color: #ECA83E; 
   border: 2px solid #ECA83E;
   padding: 8px 16px;
   border-radius: 5px;
   font-weight: bold;
-  cursor: pointer;
   transition: all 0.2s;
+  display: flex;
+  align-items: center;
 }
 
-.mainButton:hover {
-  background-color: #003b75;
+.arrow {
+  width: 15px;
+  height: auto;
+  transition: transform 0.3s ease; 
+  display: inline-block; 
+}
+
+.rotated {
+  transform: rotate(180deg);
 }
 
 .controlsPanel {
