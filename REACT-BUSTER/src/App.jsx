@@ -5,11 +5,8 @@ import styles from './App.module.css';
 import Movies from './Utils/Mokups/Movies.json';
 import FilterTitleDirector from './Utils/Filter/FilterTitleDirector';
 import Home from './Pages/Home/Home';
-
-
-
 function App() {
-  
+
   const [movies, setMovies] = useState(Movies);
   const [filters, setFilters] = useState({ type: 'todos', genre: 'todos' });
   const [searchTerm, setSearchTerm] = useState('');
@@ -38,7 +35,6 @@ function App() {
 
   return (
     <div className={styles.appContainer}>
-
       <Header
         currentFilters={filters}
         onFilterChange={setFilters}
@@ -47,8 +43,8 @@ function App() {
 
 
       <main className={styles.mainContent}>
-        <Home 
-          movies={filteredMovies} 
+        <Home
+          movies={filteredMovies}
           onToggleWatched={toggleWatched}
           onEdit={handleEdit}
           onDelete={handleDelete}

@@ -29,7 +29,6 @@ const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
       let valueB = b[criterio];
 
       if (valueA === valueB) return 0;
-
       if (direccion === 'asc') {
         return valueA > valueB ? 1 : -1;
       } else {
@@ -58,7 +57,6 @@ const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
           />
         )}
       </Modal>
-
       <div className={styles.sectionHeader}>
         <Title text="Por ver" />
         <Order onOrderChange={setSortOrder} />
