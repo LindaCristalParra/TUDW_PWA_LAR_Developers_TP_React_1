@@ -74,14 +74,20 @@
 
 .badge {
   background-color: #f0f4f8; 
-  color: #1C3CA3;
+  color: #000000;
   border: 1px solid #1C3CA3;
   padding: 6px 16px;
-  border-radius: 20px; 
+  border-radius: 4px; 
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  display: inline-flex;  
+  align-items: center;     
+  justify-content: center;  
+  line-height: 1;          
+  min-height: 32px;       
+  padding: 0 16px;
 }
 
 

@@ -7,7 +7,7 @@
 		"year": "1999",
 		"genre": "ciencia-ficcion",
 		"type": "pelicula",
-		"rating": "4",
+		"rating": "3",
 		"watched": true,
 		"deleted": false
 	},
@@ -31,7 +31,7 @@
 		"year": "2005",
 		"genre": "comedia",
 		"type": "pelicula",
-		"rating": "5",
+		"rating": "4",
 		"watched": false,
 		"deleted": false
 	},
@@ -43,7 +43,7 @@
 		"year": "2009",
 		"genre": "ciencia-ficcion",
 		"type": "pelicula",
-		"rating": "4",
+		"rating": "1",
 		"watched": true,
 		"deleted": false
 	},
@@ -55,7 +55,7 @@
 		"year": "2013",
 		"genre": "terror",
 		"type": "pelicula",
-		"rating": "4",
+		"rating": "3",
 		"watched": false,
 		"deleted": false
 	},
@@ -79,7 +79,7 @@
 		"year": "2011",
 		"genre": "accion",
 		"type": "pelicula",
-		"rating": "4",
+		"rating": "5",
 		"watched": false,
 		"deleted": false
 	},
@@ -91,7 +91,7 @@
 		"year": "1997",
 		"genre": "drama",
 		"type": "pelicula",
-		"rating": "5",
+		"rating": "3",
 		"watched": false,
 		"deleted": false
 	},
@@ -103,7 +103,7 @@
 		"year": "2019",
 		"genre": "drama",
 		"type": "pelicula",
-		"rating": "5",
+		"rating": "4",
 		"watched": false,
 		"deleted": false
 	},
@@ -127,7 +127,7 @@
 		"year": "1972",
 		"genre": "drama",
 		"type": "pelicula",
-		"rating": "5",
+		"rating": "4",
 		"watched": false,
 		"deleted": false
 	},
@@ -151,7 +151,7 @@
 		"year": "2009",
 		"genre": "accion",
 		"type": "pelicula",
-		"rating": "5",
+		"rating": "2",
 		"watched": false,
 		"deleted": false
 	},
@@ -163,7 +163,7 @@
 		"year": "2010",
 		"genre": "ciencia-ficcion",
 		"type": "pelicula",
-		"rating": "5",
+		"rating": "1",
 		"watched": false,
 		"deleted": false
 	},
@@ -175,7 +175,7 @@
 		"year": "2011",
 		"genre": "terror",
 		"type": "pelicula",
-		"rating": "5",
+		"rating": "3",
 		"watched": false,
 		"deleted": false
 	},

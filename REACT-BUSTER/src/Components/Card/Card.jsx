@@ -20,11 +20,17 @@ const Card = ({ movie, onClick }) => {
     >
       <div className={styles.imageContainer}>
         <img src={movie.image} alt={`Portada de ${movie.title}`} className={styles.poster} />
-        <span className={styles.badge}>{movie.type}</span>
+        <span className={styles.type}>{movie.type}</span>
       </div>
       <div className={styles.info}>
         <h3 className={styles.title}>{movie.title}</h3>
-        <p className={styles.year}>{movie.year}</p>
+        <div className={styles.metaRow}>
+          <span className={styles.ratingBadge} aria-label={`Rating ${movie.rating} de 5`}>
+            ★ {movie.rating}
+          </span>
+          <span className={styles.separator}>|</span>
+          <span className={styles.year}>{movie.year}</span>
+        </div>
       </div>
     </div>
   );
