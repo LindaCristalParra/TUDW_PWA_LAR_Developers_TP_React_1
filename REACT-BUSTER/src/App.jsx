@@ -18,6 +18,15 @@ function App() {
     setMovies(movies.map(m => m.id === id ? { ...m, watched: !m.watched } : m));
   };
 
+  const handleEdit = (movie) => {
+    // TODO: Implementar edición de película
+    console.log('Editar película:', movie);
+  };
+
+  const handleDelete = (id) => {
+    setMovies(movies.filter(m => m.id !== id));
+  };
+
   const filteredMovies = movies.filter((movie) => {
     const matchesSearch = FilterTitleDirector(movie, searchTerm);
     const matchesType = filters.type === 'todos' ? true : movie.type === filters.type;
@@ -38,7 +47,12 @@ function App() {
 
 
       <main className={styles.mainContent}>
-        <Home movies={filteredMovies} onToggleWatched={toggleWatched} />
+        <Home 
+          movies={filteredMovies} 
+          onToggleWatched={toggleWatched}
+          onEdit={handleEdit}
+          onDelete={handleDelete}
+        />
       </main>
 
       <Footer />

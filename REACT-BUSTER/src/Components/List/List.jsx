@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import styles from './List.module.css';
 import Card from '../Card/Card';
 
-const List = ({ items = [], onToggleWatched, onMovieClick }) => {
+const List = ({ items = [],  onMovieClick }) => {
   const carouselRef = useRef(null);
 
 

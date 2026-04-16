@@ -28,6 +28,8 @@ const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
       let valueA = a[criterio];
       let valueB = b[criterio];
 
+      if (valueA === valueB) return 0;
+
       if (direccion === 'asc') {
         return valueA > valueB ? 1 : -1;
       } else {
