@@ -4,6 +4,7 @@ import styles from './Home.module.css';
 import Order from '../../Components/Order/Order';
 import List from '../../Components/List/List';
 import CardDetail from '../../Components/CardDetail/CardDetail';
+import Modal from '../../Components/Modal/Modal';
 
 const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
 
@@ -41,9 +42,8 @@ const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
   return (
     <div className={styles.homeContainer}>
 
-      {selectedMovie && (
-      <div className={styles.modalOverlay} onClick={() => setSelectedMovie(null)}>
-        <div onClick={(e) => e.stopPropagation()}>
+      <Modal isOpen={!!selectedMovie} onClose={() => setSelectedMovie(null)}>
+        {selectedMovie && (
           <CardDetail
             movie={selectedMovie}
             onToggleWatched={handleToggleLocal}
@@ -54,9 +54,8 @@ const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
             }}
             onClose={() => setSelectedMovie(null)}
           />
-        </div>
-      </div>
-    )}
+        )}
+      </Modal>
 
       <div className={styles.sectionHeader}>
         <Title text="Por ver" />
