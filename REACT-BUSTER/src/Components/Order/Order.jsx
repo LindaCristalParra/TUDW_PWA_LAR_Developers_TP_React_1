@@ -2,18 +2,13 @@ import { useState } from 'react';
 import styles from './Order.module.css';
 
 const Order = ({ onOrderChange }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const [criterio, setCriterio] = useState('rating');
   const [direccion, setDireccion] = useState('desc');
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   const aplicarOrden = (nuevoCriterio, nuevaDireccion) => {
     setCriterio(nuevoCriterio);
     setDireccion(nuevaDireccion);
-    
+
     if (onOrderChange) {
       onOrderChange(`${nuevoCriterio}-${nuevaDireccion}`);
     }
@@ -21,17 +16,11 @@ const Order = ({ onOrderChange }) => {
 
   return (
     <div className={styles.orderContainer}>
-      <button className={styles.mainButton} onClick={toggleMenu}>
-        Ordenar por {isOpen ? '🔼' : '🔽'}
-      </button>
+      <label className={styles.mainLabel}> Ordenar por </label>
 
-      {isOpen && (
         <div className={styles.controlsPanel}>
           <div className={styles.controlGroup}>
-            <label htmlFor="criterioSelect" className={styles.label}>
-              Criterio:
-            </label>
-            <select 
+            <select
               id="criterioSelect"
               className={styles.selectInput}
               value={criterio}
@@ -43,10 +32,7 @@ const Order = ({ onOrderChange }) => {
           </div>
 
           <div className={styles.controlGroup}>
-            <label htmlFor="direccionSelect" className={styles.label}>
-              Forma:
-            </label>
-            <select 
+            <select
               id="direccionSelect"
               className={styles.selectInput}
               value={direccion}
@@ -57,7 +43,7 @@ const Order = ({ onOrderChange }) => {
             </select>
           </div>
         </div>
-      )}
+
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './Filter.module.css';
+import arrowIcon from '../../assets/Icons/ArrowDown.svg';
 
 const Filter = ({ currentFilters, onFilterChange }) => {
   const [isGenreOpen, setIsGenreOpen] = useState(false);
@@ -35,11 +36,12 @@ const Filter = ({ currentFilters, onFilterChange }) => {
           className={styles.navBtn} 
           onClick={() => setIsGenreOpen(!isGenreOpen)}
         >
-          Generos <span className={styles.chevron}>v</span>
+          Generos <span className={styles.arrow}> <img src={arrowIcon} alt="flecha" /> </span>
         </button>
         
         {isGenreOpen && (
           <div className={styles.dropdownMenu}>
+            <button onClick={() => handleGenreSelect('todos')}>Todos</button>
             <button onClick={() => handleGenreSelect('accion')}>Acción</button>
             <button onClick={() => handleGenreSelect('comedia')}>Comedia</button>
             <button onClick={() => handleGenreSelect('terror')}>Terror</button>
