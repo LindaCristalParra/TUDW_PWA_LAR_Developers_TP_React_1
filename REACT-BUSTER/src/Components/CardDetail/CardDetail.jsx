@@ -40,7 +40,7 @@ const CardDetail = ({ movie, onEdit, onDelete, onToggleWatched }) => {
                     <div className={styles.badgeGroup}>
                         <span className={styles.badge}>{movie.type}</span>
                         <span className={styles.badge}>{movie.genre}</span>
-                        <span className={styles.badge}>{movie.rating}</span>
+                        <span className={styles.badge}>{movie.rating} ★ </span>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <button type="button" className={styles.closeButton} onClick={onClose}>
-          X
+          x
         </button>
         {children}
       </div>
