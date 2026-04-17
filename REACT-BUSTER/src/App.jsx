@@ -5,10 +5,11 @@ import styles from './App.module.css';
 import Movies from './Utils/Mokups/Movies.json';
 import FilterTitleDirector from './Utils/Filter/FilterTitleDirector';
 import Home from './Pages/Home/Home';
+import useLocalStorage from './CustomHooks/useLocalStorage';
 
 function App() {
 
-  const [movies, setMovies] = useState(Movies);
+  const [movies, setMovies] = useLocalStorage('movies', Movies);
   const [filters, setFilters] = useState({ type: 'todos', genre: 'todos' });
   const [searchTerm, setSearchTerm] = useState('');
 
