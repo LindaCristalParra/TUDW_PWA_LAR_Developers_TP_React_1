@@ -2,9 +2,16 @@
   font-family: var(--font-heading); 
   font-size: 2.5rem;
   font-weight: 900;
-  color: #1C3CA3;
+  color: #EAA83E;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 10px;
+  text-shadow: 
+    -1px -1px 0 #815610,  
+     1px -1px 0 #815610,
+    -1px  1px 0 #815610,
+     1px  1px 0 #815610,
+     4px 4px 8px rgba(0, 0, 0, 0.7);
+  
+  
 }

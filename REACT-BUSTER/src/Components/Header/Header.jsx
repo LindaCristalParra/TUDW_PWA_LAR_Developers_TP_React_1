@@ -2,7 +2,7 @@ import Filter from '../Filter/Filter';
 import SearchContainer from '../Search/SearchContainer';
 import styles from './Header.module.css';
 
-const Header = ({ currentFilters, onFilterChange, onSearch }) => {
+const Header = ({ currentFilters, onFilterChange, onSearch, genreCounts, totalByType }) => {
   return (
     <header className={styles.headerContainer}>
 
@@ -18,6 +18,8 @@ const Header = ({ currentFilters, onFilterChange, onSearch }) => {
         <Filter
           currentFilters={currentFilters}
           onFilterChange={onFilterChange}
+          genreCounts={genreCounts}
+          totalByType={totalByType}
         />
       </div>
 
