@@ -21,10 +21,12 @@ function App() {
   };
 
   const handleDelete = (id) => {
-    setMovies(movies.filter(m => m.id !== id));
+    setMovies(movies.map(m => m.id === id ? { ...m, deleted: true } : m));
   };
 
   const filteredMovies = movies.filter((movie) => {
+    if (movie.deleted) return false;
+
     const matchesSearch = FilterTitleDirector(movie, searchTerm);
     const matchesType = filters.type === 'todos' ? true : movie.type === filters.type;
     const matchesGenre =
@@ -34,6 +36,7 @@ function App() {
   });
 
   const moviesForGenreCount = movies.filter((movie) => {
+    if (movie.deleted) return false;
     return filters.type === 'todos' ? true : movie.type === filters.type;
   });
 
