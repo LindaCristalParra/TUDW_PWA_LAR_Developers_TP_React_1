@@ -63,12 +63,7 @@ const List = ({ items = [],  onMovieClick }) => {
       </button>
 
     </div>
-
-    <button className={`${styles.arrowBtn} ${styles.rightArrow}`} onClick={scrollRight}>
-        &#10095; 
-      </button>
       
-    </div>
   );
 };
 export default List;
