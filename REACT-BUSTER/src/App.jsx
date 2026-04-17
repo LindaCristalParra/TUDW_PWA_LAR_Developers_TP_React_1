@@ -33,12 +33,34 @@ function App() {
     return matchesSearch && matchesType && matchesGenre;
   });
 
+  const moviesForGenreCount = movies.filter((movie) => {
+    return filters.type === 'todos' ? true : movie.type === filters.type;
+  });
+
+  const genreCounts = moviesForGenreCount.reduce(
+    (acc, movie) => {
+      if (acc[movie.genre] !== undefined) {
+        acc[movie.genre] += 1;
+      }
+      return acc;
+    },
+    {
+      accion: 0,
+      comedia: 0,
+      terror: 0,
+      drama: 0,
+      'ciencia-ficcion': 0
+    }
+  );
+
   return (
     <div className={styles.appContainer}>
       <Header
         currentFilters={filters}
         onFilterChange={setFilters}
         onSearch={setSearchTerm}
+        genreCounts={genreCounts}
+        totalByType={moviesForGenreCount.length}
       />
 
 

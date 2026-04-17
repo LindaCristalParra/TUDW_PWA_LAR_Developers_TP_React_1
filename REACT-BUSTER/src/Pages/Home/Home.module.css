@@ -25,3 +25,9 @@
   width: 100%;
 }
 
+.titleWithCounter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+

@@ -2,8 +2,7 @@ import styles from './Counter.module.css';
 
 const Counter = ({ label, count }) => {
   return (
-    <div className={styles.counterBox}>
-      <span className={styles.label}>{label}:</span>
+    <div className={styles.counterBox} aria-label={`${label}: ${count}`}>
       <span className={styles.count}>{count}</span>
     </div>
   );

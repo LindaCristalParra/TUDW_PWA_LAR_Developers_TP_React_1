@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './Filter.module.css';
 import arrowIcon from '../../assets/Icons/ArrowDown.svg';
 
-const Filter = ({ currentFilters, onFilterChange }) => {
+const Filter = ({ currentFilters, onFilterChange, genreCounts, totalByType }) => {
   const [isGenreOpen, setIsGenreOpen] = useState(false);
 
   const handleTypeSelect = (type) => {
@@ -41,12 +41,12 @@ const Filter = ({ currentFilters, onFilterChange }) => {
         
         {isGenreOpen && (
           <div className={styles.dropdownMenu}>
-            <button onClick={() => handleGenreSelect('todos')}>Todos</button>
-            <button onClick={() => handleGenreSelect('accion')}>Acción</button>
-            <button onClick={() => handleGenreSelect('comedia')}>Comedia</button>
-            <button onClick={() => handleGenreSelect('terror')}>Terror</button>
-            <button onClick={() => handleGenreSelect('drama')}>Drama</button>
-            <button onClick={() => handleGenreSelect('ciencia-ficcion')}>Ciencia Ficción</button>
+            <button onClick={() => handleGenreSelect('todos')}>Todos ({totalByType})</button>
+            <button onClick={() => handleGenreSelect('accion')}>Acción ({genreCounts?.accion ?? 0})</button>
+            <button onClick={() => handleGenreSelect('comedia')}>Comedia ({genreCounts?.comedia ?? 0})</button>
+            <button onClick={() => handleGenreSelect('terror')}>Terror ({genreCounts?.terror ?? 0})</button>
+            <button onClick={() => handleGenreSelect('drama')}>Drama ({genreCounts?.drama ?? 0})</button>
+            <button onClick={() => handleGenreSelect('ciencia-ficcion')}>Ciencia Ficción ({genreCounts?.['ciencia-ficcion'] ?? 0})</button>
           </div>
         )}
       </div>
