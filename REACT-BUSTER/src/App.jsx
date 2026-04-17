@@ -5,6 +5,7 @@ import styles from './App.module.css';
 import Movies from './Utils/Mokups/Movies.json';
 import FilterTitleDirector from './Utils/Filter/FilterTitleDirector';
 import Home from './Pages/Home/Home';
+
 function App() {
 
   const [movies, setMovies] = useState(Movies);
@@ -12,16 +13,38 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
   const toggleWatched = (id) => {
-    setMovies(movies.map(m => m.id === id ? { ...m, watched: !m.watched } : m));
+    setMovies((prevMovies) =>
+      prevMovies.map((m) => (m.id === id ? { ...m, watched: !m.watched } : m))
+    );
   };
 
-  const handleEdit = (movie) => {
-    // TODO: Implementar edición de película
-    console.log('Editar película:', movie);
+  const handleSaveMovie = (movieData) => {
+    const isEditing = Boolean(movieData?.id);
+
+    if (isEditing) {
+      setMovies((prevMovies) =>
+        prevMovies.map((movie) =>
+          movie.id === movieData.id ? { ...movie, ...movieData } : movie
+        )
+      );
+      return;
+    }
+
+    const generatedId = `${movieData.title || 'item'}-${Date.now()}`;
+    const newMovie = {
+      ...movieData,
+      id: generatedId,
+      watched: false,
+      deleted: false
+    };
+
+    setMovies((prevMovies) => [...prevMovies, newMovie]);
   };
 
   const handleDelete = (id) => {
-    setMovies(movies.map(m => m.id === id ? { ...m, deleted: true } : m));
+    setMovies((prevMovies) =>
+      prevMovies.map((m) => (m.id === id ? { ...m, deleted: true } : m))
+    );
   };
 
   const filteredMovies = movies.filter((movie) => {
@@ -71,7 +94,7 @@ function App() {
         <Home
           movies={filteredMovies}
           onToggleWatched={toggleWatched}
-          onEdit={handleEdit}
+          onSaveMovie={handleSaveMovie}
           onDelete={handleDelete}
         />
       </main>

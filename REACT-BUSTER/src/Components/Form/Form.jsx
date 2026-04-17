@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '../Button/Button'; 
 import styles from './Form.module.css';
 
@@ -20,6 +20,8 @@ const normalizeFormData = (data) => ({
 
 const Form = ({ initialData, onSave, onCancel }) => {
   const [formData, setFormData] = useState(() => normalizeFormData(initialData));
+  const isEditing = Boolean(initialData?.id);
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     setFormData(normalizeFormData(initialData));
@@ -27,18 +29,45 @@ const Form = ({ initialData, onSave, onCancel }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    if (name === 'year' && typeof e.target.setCustomValidity === 'function') {
+      e.target.setCustomValidity('');
+    }
+
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const form = e.currentTarget;
+    const yearInput = form.elements.namedItem('year');
+
+    if (yearInput && typeof yearInput.setCustomValidity === 'function') {
+      yearInput.setCustomValidity('');
+    }
+
+    const numericYear = Number(formData.year);
+    if (numericYear > currentYear) {
+      if (yearInput && typeof yearInput.setCustomValidity === 'function') {
+        yearInput.setCustomValidity(`El año no puede ser mayor que ${currentYear}.`);
+        form.reportValidity();
+      }
+      return;
+    }
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
     onSave({ ...formData, rating: Number(formData.rating) });
   };
 
   return (
     <div className={styles.formContainer}>
       <h2 className={styles.formTitle}>
-        {initialData ? 'EDITAR CONTENIDO' : 'NUEVA PELÍCULA'}
+        {isEditing ? 'EDITAR CONTENIDO' : 'NUEVA PELÍCULA/SERIE'}
       </h2>
 
       <form onSubmit={handleSubmit} className={styles.movieForm}>
@@ -85,6 +114,9 @@ const Form = ({ initialData, onSave, onCancel }) => {
               name="year" 
               value={formData.year} 
               onChange={handleChange} 
+              max={currentYear}
+              min="1888"
+              required
             />
           </div>
         </div>
@@ -143,7 +175,7 @@ const Form = ({ initialData, onSave, onCancel }) => {
         </fieldset>
 
         <div className={styles.formActions}>
-          <Button text="Guardar" variant="yellow" type="submit" />
+          <Button text="Guardar" variant="blue" type="submit" />
           <Button text="Cancelar" variant="grey" onClick={onCancel} />
         </div>
       </form>
