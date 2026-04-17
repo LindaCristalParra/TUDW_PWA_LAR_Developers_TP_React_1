@@ -48,11 +48,17 @@
   position: absolute;
   z-index: 10;
   
+<<<<<<< HEAD
  
   background-color: rgba(8, 31, 105, 0.9); 
   color: #ECA83E; 
   border: 2px solid #ECA83E;
   
+=======
+  background-color: rgba(8, 31, 105, 0.9); 
+  color: #ECA83E; 
+  border: 2px solid #ECA83E;
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
 
   border-radius: 50%;
   width: 45px;
@@ -65,6 +71,12 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+<<<<<<< HEAD
+=======
+  line-height: 0;      
+  padding: 0;           
+  overflow: hidden;
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
 }
 
 

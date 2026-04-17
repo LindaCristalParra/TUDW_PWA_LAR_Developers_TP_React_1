@@ -4,14 +4,29 @@ import Footer from './Components/Footer/Footer';
 import styles from './App.module.css';
 import Movies from './Utils/Mokups/Movies.json';
 import FilterTitleDirector from './Utils/Filter/FilterTitleDirector';
-import List from './Components/List/List';
-
-
+import Home from './Pages/Home/Home';
 function App() {
+
+  const [movies, setMovies] = useState(Movies);
   const [filters, setFilters] = useState({ type: 'todos', genre: 'todos' });
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredMovies = Movies.filter((movie) => {
+  const toggleWatched = (id) => {
+    setMovies(movies.map(m => m.id === id ? { ...m, watched: !m.watched } : m));
+  };
+
+  const handleEdit = (movie) => {
+    // TODO: Implementar edición de película
+    console.log('Editar película:', movie);
+  };
+
+  const handleDelete = (id) => {
+    setMovies(movies.map(m => m.id === id ? { ...m, deleted: true } : m));
+  };
+
+  const filteredMovies = movies.filter((movie) => {
+    if (movie.deleted) return false;
+
     const matchesSearch = FilterTitleDirector(movie, searchTerm);
     const matchesType = filters.type === 'todos' ? true : movie.type === filters.type;
     const matchesGenre =
@@ -20,18 +35,45 @@ function App() {
     return matchesSearch && matchesType && matchesGenre;
   });
 
+  const moviesForGenreCount = movies.filter((movie) => {
+    if (movie.deleted) return false;
+    return filters.type === 'todos' ? true : movie.type === filters.type;
+  });
+
+  const genreCounts = moviesForGenreCount.reduce(
+    (acc, movie) => {
+      if (acc[movie.genre] !== undefined) {
+        acc[movie.genre] += 1;
+      }
+      return acc;
+    },
+    {
+      accion: 0,
+      comedia: 0,
+      terror: 0,
+      drama: 0,
+      'ciencia-ficcion': 0
+    }
+  );
+
   return (
     <div className={styles.appContainer}>
-
       <Header
         currentFilters={filters}
         onFilterChange={setFilters}
         onSearch={setSearchTerm}
+        genreCounts={genreCounts}
+        totalByType={moviesForGenreCount.length}
       />
 
 
       <main className={styles.mainContent}>
-        <List items={filteredMovies} />
+        <Home
+          movies={filteredMovies}
+          onToggleWatched={toggleWatched}
+          onEdit={handleEdit}
+          onDelete={handleDelete}
+        />
       </main>
 
       <Footer />

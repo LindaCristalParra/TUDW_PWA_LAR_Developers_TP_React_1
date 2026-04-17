@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {useRef} from 'react';
 import styles from './List.module.css';
 import Card from '../Card/Card';
@@ -6,13 +7,28 @@ const List = ({ items = [] }) => {
   const carouselRef = useRef(null);
 
   
+=======
+import { useRef } from 'react';
+import styles from './List.module.css';
+import Card from '../Card/Card';
+
+const List = ({ items = [],  onMovieClick }) => {
+  const carouselRef = useRef(null);
+
+  const visibleItems = items.filter((item) => item.deleted === false);
+
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
   const scrollLeft = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({ left: -220, behavior: 'smooth' });
     }
   };
 
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
   const scrollRight = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({ left: 220, behavior: 'smooth' });
@@ -27,7 +43,11 @@ const List = ({ items = [] }) => {
     }
   };
 
+<<<<<<< HEAD
   if (items.length === 0) {
+=======
+  if (visibleItems.length === 0) {
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
     return (
       <p className={styles.emptyMessage}>
         No se encontraron películas ni series. ¡Empezá a agregar algunas!
@@ -35,8 +55,10 @@ const List = ({ items = [] }) => {
     );
   }
 
+
   return (
 
+<<<<<<< HEAD
     <div className={styles.listWrapper}> 
       
       <button className={`${styles.arrowBtn} ${styles.leftArrow}`} onClick={scrollLeft}>
@@ -52,6 +74,31 @@ const List = ({ items = [] }) => {
           <Card movie={item} onClick={() => { }} />
         </div>
       ))}
+=======
+    <div className={styles.listWrapper}>
+
+      <button className={`${styles.arrowBtn} ${styles.leftArrow}`} onClick={scrollLeft}>
+        &#10094;
+      </button>
+
+      <div className={styles.carouselContainer}
+        ref={carouselRef}
+        onKeyDown={handleKeyDown}
+        tabIndex="0">
+        {visibleItems.map((item) => ( 
+          <div key={item.id} className={styles.carouselItem}>
+            <Card movie={item}
+              onClick={onMovieClick} />
+          </div>
+        ))}
+        
+      </div>
+
+      <button className={`${styles.arrowBtn} ${styles.rightArrow}`} onClick={scrollRight}>
+        &#10095;
+      </button>
+
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
     </div>
 
     <button className={`${styles.arrowBtn} ${styles.rightArrow}`} onClick={scrollRight}>

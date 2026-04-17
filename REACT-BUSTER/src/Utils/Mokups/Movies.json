@@ -7,7 +7,7 @@
 		"year": "1999",
 		"genre": "ciencia-ficcion",
 		"type": "pelicula",
-		"rating": "4",
+		"rating": "3",
 		"watched": true,
 		"deleted": false
 	},
@@ -31,7 +31,7 @@
 		"year": "2005",
 		"genre": "comedia",
 		"type": "pelicula",
-		"rating": "5",
+		"rating": "4",
 		"watched": false,
 		"deleted": false
 	},
@@ -43,7 +43,11 @@
 		"year": "2009",
 		"genre": "ciencia-ficcion",
 		"type": "pelicula",
+<<<<<<< HEAD
 		"rating": "4",
+=======
+		"rating": "1",
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
 		"watched": true,
 		"deleted": false
 	},
@@ -55,9 +59,13 @@
 		"year": "2013",
 		"genre": "terror",
 		"type": "pelicula",
+<<<<<<< HEAD
 		"rating": "4",
+=======
+		"rating": "3",
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
 		"watched": false,
-		"deleted": false
+		"deleted": true
 	},
 	{
 		"id": "Interestelar-6",
@@ -79,7 +87,11 @@
 		"year": "2011",
 		"genre": "accion",
 		"type": "pelicula",
+<<<<<<< HEAD
 		"rating": "4",
+=======
+		"rating": "5",
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
 		"watched": false,
 		"deleted": false
 	},
@@ -91,7 +103,7 @@
 		"year": "1997",
 		"genre": "drama",
 		"type": "pelicula",
-		"rating": "5",
+		"rating": "3",
 		"watched": false,
 		"deleted": false
 	},
@@ -103,7 +115,7 @@
 		"year": "2019",
 		"genre": "drama",
 		"type": "pelicula",
-		"rating": "5",
+		"rating": "4",
 		"watched": false,
 		"deleted": false
 	},
@@ -117,6 +129,120 @@
 		"type": "pelicula",
 		"rating": "5",
 		"watched": false,
+		"deleted": false
+	},	
+	{
+		"id":"El Padrino-11",
+		"title": "El Padrino",
+		"image": "/posters/ElPadrino.png",
+		"director": "Francis Ford Coppola",
+		"year": "1972",
+		"genre": "drama",
+		"type": "pelicula",
+		"rating": "4",
+		"watched": false,
+		"deleted": false
+	},
+	{
+		"id":"Irene, yo y mi otro yo-12",
+		"title": "Irene, yo y mi otro yo",
+		"image": "/posters/IreneYYo.png",
+		"director": "Francis Ford Coppola",
+		"year": "2000",
+		"genre": "comedia",
+		"type": "pelicula",
+		"rating": "5",
+		"watched": false,
+		"deleted": false
+	},
+	{
+		"id":"Vivir al limite-13",
+		"title": "Vivir al limite",
+		"image": "/posters/VivirAlLimite.png",
+		"director": "Kathryn Bigelow",
+		"year": "2009",
+		"genre": "accion",
+		"type": "pelicula",
+		"rating": "2",
+		"watched": false,
+		"deleted": false
+	},
+	{
+		"id":"Origen-14",
+		"title": "Origen",
+		"image": "/posters/ElOrigen.png",
+		"director": "Christopher Nolan",
+		"year": "2010",
+		"genre": "ciencia-ficcion",
+		"type": "pelicula",
+		"rating": "1",
+		"watched": false,
+		"deleted": false
+	},
+	{
+		"id":"Fenomeno Siniestro-15",
+		"title": "Fenomeno Siniestro",
+		"image": "/posters/FenomenoSiniestro.png",
+		"director": "The Vicious Brothers",
+		"year": "2011",
+		"genre": "terror",
+		"type": "pelicula",
+		"rating": "3",
+		"watched": false,
+		"deleted": false
+	},
+	{
+		"id":"Pequeños Secretos-16",
+		"title": "Pequeños Secretos",
+		"image": "/posters/PequeñosSecretos.png",
+		"director": "John Lee Hancock",
+		"year": "2011",
+		"genre": "drama",
+		"type": "pelicula",
+		"rating": "5",
+		"watched": false,
+		"deleted": false
+	},
+	{
+<<<<<<< HEAD
+		"id": "El Irlandes-9",
+		"title": "El Irlandes",
+		"image": "/posters/ElIrlandes.png",
+		"director": "Martin Scorsese",
+		"year": "2019",
+		"genre": "drama",
+=======
+		"id":"Depredador-17",
+		"title": "Depredador",
+		"image": "/posters/Depredador.png",
+		"director": "John McTiernan",
+		"year": "1987",
+		"genre": "ciencia-ficcion",
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
+		"type": "pelicula",
+		"rating": "5",
+		"watched": false,
+		"deleted": false
+	},
+	{
+<<<<<<< HEAD
+		"id": "Golpe Bajo-10",
+		"title": "Golpe Bajo",
+		"image": "/posters/GolpeBajo.png",
+		"director": "Peter Segal",
+		"year": "2005",
+=======
+		"id":"¿Y dónde están las rubias?-18",
+		"title": "¿Y dónde están las rubias?",
+		"image": "/posters/Rubias.png",
+		"director": "Keenen Ivory Wayans",
+		"year": "2004",
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
+		"genre": "comedia",
+		"type": "pelicula",
+		"rating": "5",
+		"watched": false,
+<<<<<<< HEAD
 		"deleted": false
 	},	
 	{
@@ -149,6 +275,16 @@
 		"image": "/posters/VivirAlLimite.png",
 		"director": "Kathryn Bigelow",
 		"year": "2009",
+=======
+		"deleted": true
+	},
+	{
+		"id":"El único sobreviviente-19",
+		"title": "El único sobreviviente",
+		"image": "/posters/Sobreviviente.png",
+		"director": "Peter Berg",
+		"year": "2013",
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
 		"genre": "accion",
 		"type": "pelicula",
 		"rating": "5",
@@ -156,6 +292,7 @@
 		"deleted": false
 	},
 	{
+<<<<<<< HEAD
 		"id":"Origen-14",
 		"title": "Origen",
 		"image": "/posters/ElOrigen.png",
@@ -228,6 +365,8 @@
 		"deleted": false
 	},
 	{
+=======
+>>>>>>> c7eda4e850620d16b577828ffa43c1b344a09e84
 		"id":"Actividad Paranormal: Los Marcados-20",
 		"title": "Actividad Paranormal: Los Marcados",
 		"image": "/posters/Marcados.png",

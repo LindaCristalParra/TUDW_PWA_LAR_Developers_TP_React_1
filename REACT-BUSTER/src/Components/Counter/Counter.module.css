@@ -1,28 +1,22 @@
 .counterBox {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background-color: #1C3CA3; /* Azul Blockbuster */
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: 2px solid #ECA83E; /* Borde Amarillo Blockbuster */
+  justify-content: center;
   font-family: monospace;
-  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
   margin: 5px;
 }
 
-.label {
-  font-weight: 600;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
 .count {
-  background-color: #ECA83E; /* Fondo amarillo para el número */
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ECA83E;
   color: #000;
   font-weight: 900;
-  font-size: 1.2rem;
-  padding: 2px 10px;
-  border-radius: 12px;
+  font-size: 1rem;
+  border-radius: 50%;
+  border: 2px solid #1C3CA3;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
