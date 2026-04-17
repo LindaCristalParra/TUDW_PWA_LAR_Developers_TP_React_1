@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '../Button/Button'; 
 import styles from './Form.module.css';
 
@@ -29,14 +29,35 @@ const Form = ({ initialData, onSave, onCancel }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    if (name === 'year' && typeof e.target.setCustomValidity === 'function') {
+      e.target.setCustomValidity('');
+    }
+
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const form = e.currentTarget;
+    const yearInput = form.elements.namedItem('year');
+
+    if (yearInput && typeof yearInput.setCustomValidity === 'function') {
+      yearInput.setCustomValidity('');
+    }
+
     const numericYear = Number(formData.year);
     if (numericYear > currentYear) {
+      if (yearInput && typeof yearInput.setCustomValidity === 'function') {
+        yearInput.setCustomValidity(`El año no puede ser mayor que ${currentYear}.`);
+        form.reportValidity();
+      }
+      return;
+    }
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
       return;
     }
 
