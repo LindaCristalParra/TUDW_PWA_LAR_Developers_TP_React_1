@@ -57,7 +57,7 @@
 		"type": "pelicula",
 		"rating": "3",
 		"watched": false,
-		"deleted": false
+		"deleted": true
 	},
 	{
 		"id": "Interestelar-6",
@@ -213,7 +213,7 @@
 		"type": "pelicula",
 		"rating": "5",
 		"watched": false,
-		"deleted": false
+		"deleted": true
 	},
 	{
 		"id":"El único sobreviviente-19",

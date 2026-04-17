@@ -5,6 +5,7 @@ import Card from '../Card/Card';
 const List = ({ items = [],  onMovieClick }) => {
   const carouselRef = useRef(null);
 
+  const visibleItems = items.filter((item) => item.deleted === false);
 
   const scrollLeft = () => {
     if (carouselRef.current) {
@@ -27,13 +28,14 @@ const List = ({ items = [],  onMovieClick }) => {
     }
   };
 
-  if (items.length === 0) {
+  if (visibleItems.length === 0) {
     return (
       <p className={styles.emptyMessage}>
         No se encontraron películas ni series. ¡Empezá a agregar algunas!
       </p>
     );
   }
+
 
   return (
 
@@ -47,12 +49,13 @@ const List = ({ items = [],  onMovieClick }) => {
         ref={carouselRef}
         onKeyDown={handleKeyDown}
         tabIndex="0">
-        {items.map((item) => (
+        {visibleItems.map((item) => ( 
           <div key={item.id} className={styles.carouselItem}>
             <Card movie={item}
               onClick={onMovieClick} />
           </div>
         ))}
+        
       </div>
 
       <button className={`${styles.arrowBtn} ${styles.rightArrow}`} onClick={scrollRight}>
