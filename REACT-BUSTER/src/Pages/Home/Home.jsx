@@ -6,11 +6,13 @@ import List from '../../Components/List/List';
 import CardDetail from '../../Components/CardDetail/CardDetail';
 import Modal from '../../Components/Modal/Modal';
 import Counter from '../../Components/Counter/Counter';
+import Alert from '../../Components/Alert/Alert';
 
 const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
 
   const [sortOrder, setSortOrder] = useState('rating-desc');
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const [showDeleteAlert, setShowDeleteAlert] = useState(false);
 
   const handleToggleLocal = (id) => {
     onToggleWatched(id);
@@ -41,23 +43,54 @@ const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
   const porVer = getSortedMovies(movies.filter(m => !m.watched));
   const vistas = getSortedMovies(movies.filter(m => m.watched));
 
+  const handleRequestDelete = () => {
+    setShowDeleteAlert(true);
+  };
+
+  const handleConfirmDelete = () => {
+    if (!selectedMovie) return;
+
+    onDelete(selectedMovie.id);
+    setShowDeleteAlert(false);
+    setSelectedMovie(null);
+  };
+
+  const handleCancelDelete = () => {
+    setShowDeleteAlert(false);
+  };
+
   return (
     <div className={styles.homeContainer}>
 
-      <Modal isOpen={!!selectedMovie} onClose={() => setSelectedMovie(null)}>
+      <Modal
+        isOpen={!!selectedMovie && !showDeleteAlert}
+        onClose={() => {
+          setShowDeleteAlert(false);
+          setSelectedMovie(null);
+        }}
+      >
         {selectedMovie && (
-          <CardDetail
-            movie={selectedMovie}
-            onToggleWatched={handleToggleLocal}
-            onEdit={onEdit}
-            onDelete={(id) => {
-              onDelete(id);
-              setSelectedMovie(null);
-            }}
-            onClose={() => setSelectedMovie(null)}
-          />
+          <>
+            <CardDetail
+              movie={selectedMovie}
+              onToggleWatched={handleToggleLocal}
+              onEdit={onEdit}
+              onDelete={handleRequestDelete}
+              onClose={() => setSelectedMovie(null)}
+            />
+          </>
         )}
       </Modal>
+
+      <Modal isOpen={showDeleteAlert} onClose={handleCancelDelete}>
+        <Alert
+          type="danger"
+          text="¿Estas seguro que deseas eliminar?"
+          onAccept={handleConfirmDelete}
+          onCancel={handleCancelDelete}
+        />
+      </Modal>
+
       <div className={styles.sectionHeader}>
         <div className={styles.titleWithCounter}>
           <Title text="Por ver" />
