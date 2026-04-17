@@ -8,16 +8,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  overflow: hidden;
   z-index: 1000;
 }
 
 .modalContent {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
-  min-width: 300px;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  min-width: 0;
+  width: auto;
+  max-height: none;
+  overflow: visible;
   position: relative;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4), 0px 0px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
 }
 
 .closeButton {
