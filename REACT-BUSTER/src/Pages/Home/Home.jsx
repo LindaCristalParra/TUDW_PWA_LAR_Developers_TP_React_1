@@ -7,12 +7,41 @@ import CardDetail from '../../Components/CardDetail/CardDetail';
 import Modal from '../../Components/Modal/Modal';
 import Counter from '../../Components/Counter/Counter';
 import Alert from '../../Components/Alert/Alert';
+import Form from '../../Components/Form/Form';
 
-const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
+const Home = ({ movies, onToggleWatched, onSaveMovie, onDelete }) => {
 
   const [sortOrder, setSortOrder] = useState('rating-desc');
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [showDeleteAlert, setShowDeleteAlert] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const [formInitialData, setFormInitialData] = useState(null);
+
+  const closeAllModals = () => {
+    setSelectedMovie(null);
+    setShowDeleteAlert(false);
+    setShowForm(false);
+    setFormInitialData(null);
+  };
+
+  const handleOpenCreate = () => {
+    setFormInitialData(null);
+    setShowDeleteAlert(false);
+    setSelectedMovie(null);
+    setShowForm(true);
+  };
+
+  const handleOpenEdit = (movie) => {
+    setFormInitialData(movie);
+    setShowDeleteAlert(false);
+    setSelectedMovie(null);
+    setShowForm(true);
+  };
+
+  const handleSaveFromForm = (movieData) => {
+    onSaveMovie(movieData);
+    closeAllModals();
+  };
 
   const handleToggleLocal = (id) => {
     onToggleWatched(id);
@@ -63,20 +92,17 @@ const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
     <div className={styles.homeContainer}>
 
       <Modal
-        isOpen={!!selectedMovie && !showDeleteAlert}
-        onClose={() => {
-          setShowDeleteAlert(false);
-          setSelectedMovie(null);
-        }}
+        isOpen={!!selectedMovie && !showDeleteAlert && !showForm}
+        onClose={closeAllModals}
       >
         {selectedMovie && (
           <>
             <CardDetail
               movie={selectedMovie}
               onToggleWatched={handleToggleLocal}
-              onEdit={onEdit}
+              onEdit={handleOpenEdit}
               onDelete={handleRequestDelete}
-              onClose={() => setSelectedMovie(null)}
+              onClose={closeAllModals}
             />
           </>
         )}
@@ -91,10 +117,26 @@ const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
         />
       </Modal>
 
+      <Modal isOpen={showForm} onClose={closeAllModals}>
+        <Form
+          initialData={formInitialData}
+          onSave={handleSaveFromForm}
+          onCancel={closeAllModals}
+        />
+      </Modal>
+
       <div className={styles.sectionHeader}>
         <div className={styles.titleWithCounter}>
           <Title text="Por ver" />
           <Counter label="TotalPorVer" count={porVer.length} />
+          <button
+            type="button"
+            className={styles.addButton}
+            onClick={handleOpenCreate}
+            aria-label="Agregar película o serie"
+          >
+            +
+          </button>
         </div>
         <Order onOrderChange={setSortOrder} />
       </div>

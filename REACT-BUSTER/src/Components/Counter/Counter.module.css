@@ -13,10 +13,10 @@
   align-items: center;
   justify-content: center;
   background-color: #ECA83E;
-  color: #000;
+  color: #081F69;
   font-weight: 900;
   font-size: 1rem;
-  border-radius: 50%;
+  border-radius: 10%;
   border: 2px solid #1C3CA3;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
 }

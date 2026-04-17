@@ -20,6 +20,8 @@ const normalizeFormData = (data) => ({
 
 const Form = ({ initialData, onSave, onCancel }) => {
   const [formData, setFormData] = useState(() => normalizeFormData(initialData));
+  const isEditing = Boolean(initialData?.id);
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     setFormData(normalizeFormData(initialData));
@@ -32,13 +34,19 @@ const Form = ({ initialData, onSave, onCancel }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const numericYear = Number(formData.year);
+    if (numericYear > currentYear) {
+      return;
+    }
+
     onSave({ ...formData, rating: Number(formData.rating) });
   };
 
   return (
     <div className={styles.formContainer}>
       <h2 className={styles.formTitle}>
-        {initialData ? 'EDITAR CONTENIDO' : 'NUEVA PELÍCULA'}
+        {isEditing ? 'EDITAR CONTENIDO' : 'NUEVA PELÍCULA/SERIE'}
       </h2>
 
       <form onSubmit={handleSubmit} className={styles.movieForm}>
@@ -85,6 +93,9 @@ const Form = ({ initialData, onSave, onCancel }) => {
               name="year" 
               value={formData.year} 
               onChange={handleChange} 
+              max={currentYear}
+              min="1888"
+              required
             />
           </div>
         </div>
@@ -143,7 +154,7 @@ const Form = ({ initialData, onSave, onCancel }) => {
         </fieldset>
 
         <div className={styles.formActions}>
-          <Button text="Guardar" variant="yellow" type="submit" />
+          <Button text="Guardar" variant="blue" type="submit" />
           <Button text="Cancelar" variant="grey" onClick={onCancel} />
         </div>
       </form>
