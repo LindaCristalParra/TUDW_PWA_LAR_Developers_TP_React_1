@@ -16,12 +16,18 @@
   padding-bottom: 10px;
 }
 
-.sectionHeader h2, 
-.sectionHeader div { 
+.sectionHeader > h2,
+.sectionHeader > div {
   margin: 0; 
 }
 
 .section {
   width: 100%;
+}
+
+.titleWithCounter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 

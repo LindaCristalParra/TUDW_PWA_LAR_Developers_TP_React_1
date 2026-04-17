@@ -5,6 +5,7 @@ import Order from '../../Components/Order/Order';
 import List from '../../Components/List/List';
 import CardDetail from '../../Components/CardDetail/CardDetail';
 import Modal from '../../Components/Modal/Modal';
+import Counter from '../../Components/Counter/Counter';
 
 const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
 
@@ -58,7 +59,10 @@ const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
         )}
       </Modal>
       <div className={styles.sectionHeader}>
-        <Title text="Por ver" />
+        <div className={styles.titleWithCounter}>
+          <Title text="Por ver" />
+          <Counter label="TotalPorVer" count={porVer.length} />
+        </div>
         <Order onOrderChange={setSortOrder} />
       </div>
 
@@ -69,7 +73,10 @@ const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
       />
 
       <div className={styles.sectionHeader}>
-        <Title text="Vistas" />
+        <div className={styles.titleWithCounter}>
+          <Title text="Vistas" />
+          <Counter label="TotalVistas" count={vistas.length} />
+        </div>
       </div>
 
       <List
