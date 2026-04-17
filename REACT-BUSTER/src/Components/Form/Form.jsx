@@ -5,7 +5,7 @@ import styles from './Form.module.css';
 
 const defaultFormData = {
   title: '',
-  image: '',
+  image: '/buster.svg',
   director: '',
   year: '',
   genre: '',
@@ -61,7 +61,11 @@ const Form = ({ initialData, onSave, onCancel }) => {
       return;
     }
 
-    onSave({ ...formData, rating: Number(formData.rating) });
+    onSave({
+      ...formData,
+      image: formData.image.trim() || '/buster.svg',
+      rating: Number(formData.rating)
+    });
   };
 
   return (
@@ -85,10 +89,10 @@ const Form = ({ initialData, onSave, onCancel }) => {
         </div>
 
         <div className={styles.inputGroup}>
-          <label htmlFor="image">Imagen (URL)</label>
+          <label htmlFor="image">Imagen (Link opcional)</label>
           <input 
             id="image"
-            type="url"
+            type="text"
             name="image" 
             value={formData.image} 
             onChange={handleChange} 
