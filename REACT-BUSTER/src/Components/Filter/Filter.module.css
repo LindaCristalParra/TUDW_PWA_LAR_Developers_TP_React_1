@@ -23,8 +23,11 @@
   transform: scale(1.1);
 }
 
-.chevron {
-  font-size: 0.8rem; 
+.arrow {
+  width: 28px;  
+  height: auto;
+  margin-left: 5px;
+  vertical-align: middle; 
 }
 
 .dropdownContainer {

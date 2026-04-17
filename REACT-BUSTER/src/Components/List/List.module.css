@@ -48,11 +48,9 @@
   position: absolute;
   z-index: 10;
   
- 
   background-color: rgba(8, 31, 105, 0.9); 
   color: #ECA83E; 
   border: 2px solid #ECA83E;
-  
 
   border-radius: 50%;
   width: 45px;
@@ -65,6 +63,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  line-height: 0;      
+  padding: 0;           
+  overflow: hidden;
 }
 
 
