@@ -5,7 +5,7 @@ import styles from './Form.module.css';
 
 const defaultFormData = {
   title: '',
-  image: '/buster.svg',
+  image: '/NoImage.svg',
   director: '',
   year: '',
   genre: '',
@@ -63,7 +63,7 @@ const Form = ({ initialData, onSave, onCancel }) => {
 
     onSave({
       ...formData,
-      image: formData.image.trim() || '/buster.svg',
+      image: formData.image.trim() || '/NoImage.svg',
       rating: Number(formData.rating)
     });
   };
