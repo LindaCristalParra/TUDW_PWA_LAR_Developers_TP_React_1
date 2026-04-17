@@ -61,7 +61,7 @@ const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
       <div className={styles.sectionHeader}>
         <div className={styles.titleWithCounter}>
           <Title text="Por ver" />
-          <Counter label="Total" count={porVer.length} />
+          <Counter label="TotalPorVer" count={porVer.length} />
         </div>
         <Order onOrderChange={setSortOrder} />
       </div>
@@ -75,7 +75,7 @@ const Home = ({ movies, onToggleWatched, onEdit, onDelete }) => {
       <div className={styles.sectionHeader}>
         <div className={styles.titleWithCounter}>
           <Title text="Vistas" />
-          <Counter label="Total" count={vistas.length} />
+          <Counter label="TotalVistas" count={vistas.length} />
         </div>
       </div>
 

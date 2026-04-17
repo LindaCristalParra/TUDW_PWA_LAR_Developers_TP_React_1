@@ -16,8 +16,8 @@
   padding-bottom: 10px;
 }
 
-.sectionHeader h2, 
-.sectionHeader div { 
+.sectionHeader > h2,
+.sectionHeader > div {
   margin: 0; 
 }
 
